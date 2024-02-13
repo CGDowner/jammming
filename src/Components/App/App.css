@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  background-color: hsla(263, 79%, 40%, 1);
+}
+
+.App-header {
+  display: flex;
+  height: 3em;
+  align-items: start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; /* hsla(273, 100%, 67%, 1); */
+  background-color: hsla(263, 96%, 11%, 1);
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 0.2em;
+}
+
+h1 {
+  font-size: 2em;
+  position: relative;
+  bottom: 0.75em;
+}
+
+span {
+  color: hsla(282, 96%, 27%, 1);
+}
+
+.SearchSection form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.SearchSection input {
+  position: relative;
+  bottom: 2em;
+}
+
+.MainSection {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  margin-top: -10em;
+  height: 100em;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .MainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin-top: -3em;
+    height: 120em;
+  }
+
+}
