@@ -1,14 +1,18 @@
 import React from 'react';
 import '../SearchResults/SearchResults.css'
 
-import SearchBar from '../SearchBar/SearchBar';
+import Tracklist from '../TrackList/TrackList';
 
-function SearchResults() {
+function SearchResults(props) {
     return (
-        <div style={{background: 'white',
-                    color: 'black',
-                    height: '80em'}}>
+        <div style={{
+            background: 'hsla(263, 96%, 11%, 1)',
+            border: '0.05em solid',
+            borderColor: 'white',
+            color: 'white',
+            height: '80em'}}>
             <h2>Search Results</h2>
+            <Tracklist userSearchResults={props.userSearchResults} isRemoval={true} onAdd={props.onAdd}/>
         </div>
     )
 }

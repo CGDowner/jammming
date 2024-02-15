@@ -14,7 +14,9 @@
 }
 
 body {
-  background-color: hsla(263, 79%, 40%, 1);
+ /* background-color: hsla(263, 79%, 40%, 1); */
+ background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1678120729579339650/40A46978EF29C7099912D8CA459BBC9FAC764F2E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+ background-size: cover;
 }
 
 .App-header {
@@ -74,7 +76,7 @@ span {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
 
   .MainSection {
     display: flex;
@@ -83,6 +85,7 @@ span {
     color: white;
     align-items: center;
     margin-top: -3em;
+    margin-bottom: 4em;
     height: 120em;
   }
 
