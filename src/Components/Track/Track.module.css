@@ -1,6 +1,6 @@
 .Track {
     display: flex;
-    min-width: 500px;
+    min-width: 450px;
     align-items: center;
     border-bottom: 1px solid rgba(256, 256, 256, 0.8);
 }
@@ -34,3 +34,11 @@
     font-weight: 300;
     color: rgba(256, 256, 256, 0.8);
 }
+
+@media only screen and (max-width: 1100px) {
+
+    .Track {
+     width: 100%;
+    }
+    
+  }
