@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import Playlist from '../Playlist/Playlist'
 import SearchResults from '../SearchResults/SearchResults';
+import { Spotify } from '../../Util/Spotify/Spotify';
 
 function App() {
   const [searchResults, setSearchResults] = useState([
@@ -61,20 +62,33 @@ function App() {
     setPlayListTracks(existingTrack);
   }
 
+  function updatePlayListName(name) {
+    setPlayListName(name);
+  }
+
+  function savePlaylist() {
+    const trackURIs = playListTracks.map((t) => t.uri);
+  }
+
+  function search(term) {
+    Spotify.search(term).then((result) => setSearchResults(result));
+    console.log(term);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Ja<span>mmm</span>ing</h1>
       </header>
-      <div className='SearchSection'>
-        <SearchBar />
-      </div>
+      <SearchBar onSearch={search}/>
       <div className='MainSection'>
         <SearchResults userSearchResults={searchResults} onAdd={addTrack}/>
         <Playlist 
         PlaylistName={playListName} 
         playListTracks={playListTracks}
         onRemove={removeTrack}
+        onNameChange={updatePlayListName}
+        onSave={savePlaylist}
         />
       </div>
     </div>

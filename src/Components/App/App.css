@@ -41,19 +41,6 @@ span {
   color: hsla(282, 96%, 27%, 1);
 }
 
-.SearchSection form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-}
-
-.SearchSection input {
-  position: relative;
-  bottom: 2em;
-}
-
 .MainSection {
   display: flex;
   flex-direction: row;

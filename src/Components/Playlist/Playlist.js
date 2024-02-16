@@ -4,6 +4,11 @@ import '../Playlist/Playlist.css'
 import TrackList from '../TrackList/TrackList';
 
 function Playlist(props) {
+
+    function handleNameChange({target}) {
+      props.onNameChange(target.value);
+    }
+
     return (
         <div style={{
             background: 'hsla(263, 96%, 11%, 1)',
@@ -12,7 +17,13 @@ function Playlist(props) {
             borderColor: 'white',
             height: '80em'}}>
             <h2>Playlist</h2>
-            <TrackList userSearchResults={props.playListTracks} onRemove={props.onRemove} isRemoval={false}/>
+            <input placeholder={"Enter New Playlist Name"} id='playlistInput' onChange={handleNameChange}/>
+            <TrackList 
+             userSearchResults={props.playListTracks} 
+             onRemove={props.onRemove} 
+             isRemoval={false}
+             />
+            <button id='playlistButton' onClick={props.onSave}>Save To Spotify</button>
         </div>
     )
 }
