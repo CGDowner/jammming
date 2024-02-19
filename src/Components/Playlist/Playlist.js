@@ -15,7 +15,8 @@ function Playlist(props) {
             color: 'white',
             border: '0.05em solid',
             borderColor: 'white',
-            height: '80em'}}>
+            height: '80em',
+            overflowY: 'scroll'}}>
             <h2>Playlist</h2>
             <input placeholder={"Enter New Playlist Name"} id='playlistInput' onChange={handleNameChange}/>
             <TrackList 

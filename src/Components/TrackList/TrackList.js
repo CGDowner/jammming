@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './TrackList.module.css'
 import Track from '../Track/Track';
+import Playlist from '../Playlist/Playlist';
 
 function Tracklist(props) {
     return (

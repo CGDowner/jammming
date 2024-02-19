@@ -2,6 +2,7 @@ import React from 'react';
 import '../SearchResults/SearchResults.css'
 
 import Tracklist from '../TrackList/TrackList';
+import Playlist from '../Playlist/Playlist';
 
 function SearchResults(props) {
     return (
@@ -10,7 +11,8 @@ function SearchResults(props) {
             border: '0.05em solid',
             borderColor: 'white',
             color: 'white',
-            height: '80em'}}>
+            height: '80em',
+            overflowY: 'scroll'}}>
             <h2>Search Results</h2>
             <Tracklist userSearchResults={props.userSearchResults} isRemoval={true} onAdd={props.onAdd}/>
         </div>
