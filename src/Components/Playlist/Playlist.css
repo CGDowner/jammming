@@ -5,6 +5,7 @@ div {
 #playlistInput {
     width: 100%;
     height: 100px;
+    text-align: center;
     border: 0;
     outline: 0;
     padding: 0;

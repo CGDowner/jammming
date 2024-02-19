@@ -10,40 +10,12 @@ import { Spotify } from '../../Util/Spotify/Spotify';
 
 function App() {
   const [searchResults, setSearchResults] = useState([
-    {
-    name: "example track 1 ",
-    artist: "example track artist 1",
-    album: "example track album 1",
-    id: 1,
-  },
-  {
-    name: "example track 2 ",
-    artist: "example track artist 2",
-    album: "example track album 2",
-    id: 2,
-  },
-  {
-    name: "example track 3 ",
-    artist: "example track artist 3",
-    album: "example track album 3",
-    id: 3,
-  }]);
+
+]);
 
   const [playListName, setPlayListName] = useState("Example Playlist Name");
 
   const [playListTracks, setPlayListTracks] = useState([
-  {
-    name: 'example name 1',
-    artist: 'example artist 1',
-    album: 'example album 1',
-    id: 1,
-  },
-  {
-    name: 'example name 2',
-    artist: 'example artist 2',
-    album: 'example album 2',
-    id: 2,
-  },
   ]);
 
   function addTrack(track) {
